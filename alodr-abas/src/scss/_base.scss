@@ -1,0 +1,65 @@
+$color-primaryDark : rgb(26, 127, 209);
+$color-primary : rgb(14, 153, 212);
+$color-backGrounde : #F1F1F1;
+$color-white : #FFFFFF;
+$color-black : #000;
+$color-sorm : rgb(7, 44, 112);
+$color-disabled : #b8b8b8;
+$color-gray : rgb(206, 206, 206);
+$color-silver : #F1F1F1;
+$color-comments : #f2f2f2;
+
+
+$color-backgroundAccept : #def3de;
+$color-colorAccept : #397539;
+$color-backgroundDanger : #F7DFDE;
+$color-colorDanger : #b2646a;
+
+$font-main : IranSans;
+$font-title : Shabnam;
+$font-vaziri : Vazir;
+$font-josef : sans-serif;
+
+
+@font-face {
+    font-family: IranSans;
+    src: url('../Adds/Fonts/Iranian Sans.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../Adds/Fonts/Shabnam-Bold.ttf');
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('../Adds/Fonts/Vazir.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin Sans', sans-serif;
+    src:  url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+}
+
+@mixin centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  buttons {
+    border: 2px solid $color-primaryDark;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+

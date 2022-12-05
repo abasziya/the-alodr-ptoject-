@@ -1,0 +1,2521 @@
+.header{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 8px;
+    padding-left: 40px;
+    min-height: 8vh;
+
+    // background-color: $color-white;
+    // background-color:rgb(41, 181, 236);
+    background : linear-gradient(rgb(93, 183, 219), rgb(19, 160, 216) );
+
+    // box-shadow: rgb(238,238,238) 0px 2px 10px 0px;
+    // box-shadow: rgb(41, 181, 236) 0px 2px 10px 0px;
+    &-menu{
+        min-width: 50%;
+        @include centering;
+        justify-content: flex-end;
+
+       
+        &-ul{
+
+            display: flex;
+            margin-top: 15px;
+            direction: rtl;
+
+            li{
+                margin-right: 25px;
+                font-family: $font-title;
+                                
+                
+                a{
+                    // color : $color-black;
+                    text-decoration: none;
+                    color : $color-white;
+                    font-size: 15px;
+                    font-weight: 550;
+                    word-spacing: 0;
+                    transition: color .8s;
+                    cursor: pointer;
+                    &:hover{
+                        color : $color-sorm;
+                    }
+                }
+            }
+
+            .home-link{
+                a{
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: $color-sorm;
+                }
+            }
+
+            
+        }
+    }
+
+    &-login{
+        @include centering;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        
+        .header-login-button {
+            text-decoration: none;
+            @include centering;
+            direction: rtl;
+            justify-content: space-around;
+            text-align: center;
+            // margin-left: 25px;
+            width: 150px;
+            border: 1px solid $color-white;
+            height: 50px;
+            border-radius: 5px;
+            background-color: transparent;
+            // background-color: $color-white;
+            font-family: $font-main;
+            font-size: 14px;
+            font-weight: 800px;
+            color: $color-white;
+            cursor: pointer;
+            transition: all .8s;
+            text-overflow: inherit;
+
+            p{
+                width: 60%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+        }
+
+
+   
+        .dropdown-content{
+                // display: none;
+
+                position: absolute;
+                
+                height: 70px;
+                // margin-left: 15px;
+                margin: 0px;
+                // overflow-y: auto;
+                top : 70px;
+                width: 150px;
+                padding: 0px;
+                z-index: 100;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    line-height: 2;
+                    background-color: $color-silver;
+                    border-bottom: 1px solid gray;
+                    font-family: $font-vaziri;
+                    font-size: 14px;
+                    cursor: pointer;
+                    a{
+                        font-family: $font-vaziri;
+                        font-size: 14px;
+                        color: $color-black;
+                    }
+                }
+            }
+        
+
+    }
+}
+
+
+.banner{
+    
+    padding-top: 25px;
+    height: 60vh; 
+   &-logo{
+    // @include centering;
+
+
+    
+    flex-wrap: wrap;
+    // width: 80vw;
+    height: 30vh;
+    padding: 25px;
+   }
+
+   &-searchbox{
+    margin: 4% auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    // position: relative;
+    // margin: 0 auto;
+   }
+}
+
+
+.form{  
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient($color-primary , $color-primaryDark , $color-sorm);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    .login-formWrapper , .login-forget {
+        @include centering;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: $color-white;
+        box-sizing: border-box;
+        width: 500px;
+        height: 75vh;
+        margin: 0 auto;
+        padding: 25px;
+        // padding-top: 60px;
+
+        .signLoginHeader{
+            margin-top: 20px;
+        }
+
+        .formWrpper-logInpBox{
+
+            margin-top: 25px;
+            min-height: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            input {
+                direction: rtl;
+                width: 400px;
+                padding:12px 10px;
+                background-color: transparent;
+                border: 1px solid gray;
+                font-size: 17px;
+                font-family: $font-vaziri;
+                transition: border .8s;
+                &::placeholder{
+                    font-size: 17px;
+                    font-family: $font-vaziri;
+                    
+                }
+                
+                &:focus{
+                    border: 1px solid $color-primary;
+                    outline: none;
+                }
+            }
+            .inpDang{
+                border: 1px solid red !important;
+            }
+
+            .formWrpper-logInpBox-passwordBox{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                
+                .label-pass{
+                    margin-top: 15px;
+                    font-family: $font-vaziri;
+                    color: $color-primary;
+                    font-size: 15px;
+                }
+            }
+
+            
+
+        }
+
+        .formWrpper-logBtnBox{
+
+            margin-top: 50px;
+            button{
+                width: 400px;
+                border: 1px solid transparent;
+                text-align: center;
+                font-family: $font-vaziri;
+                font-size: 20px;
+                color: $color-white;
+                background-color: $color-primaryDark;
+                height: 50px;
+                cursor: pointer;
+                padding: 5px;
+                transition: all .7s ;
+
+                &:hover {
+                    background-color: $color-white;
+                    border: 1px solid $color-primaryDark;
+                    color: $color-primaryDark;
+                }
+
+            }
+
+            div{
+                margin-top: 50px;
+                width: 100%;
+                text-align: right;
+
+                span{
+                    font-size: 18px;
+                    font-family: $font-vaziri;
+                    cursor: pointer;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .login-forget{
+        .signLoginHeader {
+            margin-top: 70px;
+        }
+
+        .formWrpper-forget{
+            margin-top: 25px;
+            min-height: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            &-numberBox{
+                margin-top: 25px;
+                min-height: 35%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                .mobileNumber {
+                    
+                    width: 400px;
+                    padding:12px 10px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                    font-size: 26px;
+                    text-align: center;
+                    font-family: $font-vaziri;
+                    transition: border .8s;
+                    &::placeholder{
+                        font-size: 17px;
+                        font-family: $font-vaziri;
+                        
+                    }
+                    
+                    &:focus{
+                        border-bottom: 1px solid $color-primary;
+                        outline: none;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+    .codeBox{
+        @include centering;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $color-white;
+        box-sizing: border-box;
+        width: 500px;
+        height: 75vh;
+        margin: 0 auto;
+        padding: 25px;
+    
+        .code-wrapper{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            
+            input{
+                width: 50px;
+                border: none;
+                border-bottom: 1px solid $color-gray;
+                padding:8px;
+                margin: 5px;
+                text-align: center;
+                font-size: 25px;
+                font-family: $font-title;
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $color-primary;
+                }
+            }
+        }
+    
+        .codeTimer{
+            margin-top: 2%;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            
+            span{
+        
+                font-size: 13px;
+                font-family: $font-vaziri;
+                color: $color-primary;
+                direction: rtl;
+                cursor: pointer;
+            }
+        
+        
+            span:last-child{
+                display: none ;
+            }
+        }
+    
+        .formWrpper-logBtnBox{
+    
+            margin-top: 50px;
+            button{
+                width: 400px;
+                border: 1px solid transparent;
+                text-align: center;
+                font-family: $font-vaziri;
+                font-size: 20px;
+                color: $color-white;
+                background-color: $color-primaryDark;
+                height: 50px;
+                cursor: pointer;
+                padding: 5px;
+                transition: all .7s ;
+    
+                &:hover {
+                    background-color: $color-white;
+                    border: 1px solid $color-primaryDark;
+                    color: $color-primaryDark;
+                }
+    
+                
+    
+            }
+    
+            div{
+                margin-top: 50px;
+                width: 100%;
+                text-align: right;
+    
+                span{
+                    font-size: 18px;
+                    font-family: $font-vaziri;
+                    cursor: pointer;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &-box{
+        background-color: $color-white;
+        height: 600px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       position: relative;
+       border-radius: 8px;
+        padding: 10px;
+
+
+
+        .signLoginHeader{
+            @include centering;
+            height: 10%;
+            padding: 5px;
+        }
+
+        .formWrpper{
+            direction: rtl;
+            // border: 1px solid rgb(168, 27, 51);
+            width: 100%;
+            min-height: 70%;
+            // padding: 15px;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            &-logInpBox {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                div {
+
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        margin: 6px;
+                        width: 550px;
+                        padding:12px 10px;
+                        background-color: transparent;
+                        border: 1px solid gray;
+                        font-size: 17px;
+                        font-family: $font-vaziri;
+                        transition: border .8s;
+                        &::placeholder{
+                            font-size: 17px;
+                            font-family: $font-vaziri;
+                            
+                        }
+                        
+                        &:focus{
+                            border: 1px solid $color-primary;
+                            outline: none;
+                        }
+                    }
+
+                    .label-pass {
+                        display: block;
+                        margin: 6px;
+                        width: 400px;
+                        padding:12px 10px;
+                        font-family: $font-vaziri;
+                        font-size: 14px;
+                        color: $color-primary;
+                        cursor: pointer;
+
+                    }
+                }
+
+            }
+
+            &-logBtnBox{
+                @include centering;
+                width: 100%;
+                margin-top: 100px;
+
+                button{
+                    width: 350px;
+                    border: 1px solid transparent;
+                    text-align: center;
+                    font-family: $font-vaziri;
+                    font-size: 20px;
+                    color: $color-white;
+                    background-color: $color-primaryDark;
+                    height: 50px;
+                    cursor: pointer;
+                    padding: 5px;
+                    transition: all .7s ;
+
+                    &:hover {
+                        background-color: $color-white;
+                        border: 1px solid $color-primaryDark;
+                        color: $color-primaryDark;
+                    }
+
+                }
+            }
+            .profileWrapper{
+                width: 35%;
+                height: 50px;
+                position: relative;
+                bottom: 30px;
+                // background-color: red;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                
+                border-right: none;
+
+                input[type="file"]{
+                    display: none;
+                }
+
+                span{
+                    transition: width .9s;
+                    width: 0px;
+                    height: 2px;
+                    background-color: $color-primaryDark;
+                }
+
+                // .preview{
+                //     width: 50%;
+                //     height: 80px;
+                //     border: 2px solid $color-primary;
+                //     // border-radius: 25px; 
+                //     overflow: hidden;
+
+                //     div{
+                //         @include centering;
+                //         font-size: 13px;
+                //         font-size: $font-vaziri;
+                //         color: $color-primary;
+                //         text-align: center;
+                //         height: 100%;
+                //     }
+                //     img {
+                //         width: 100%;
+                //         height: 100%;
+
+                //     }
+                // }
+
+            }
+
+
+
+            .text-inputs{
+                display: flex;
+                flex-direction: column;
+                .address-inp{
+                    box-sizing: border-box;
+                    width: 99%;
+                    margin: 6px;
+                    // margin-left: 6px;
+                    margin-top: 6px;
+
+
+                }
+            }
+
+            .selection-inputs{
+                display: flex;
+                flex-direction: row;
+
+            }
+
+            .radiobox{
+                margin: 6px;
+                @include centering;
+                justify-content: flex-end;
+
+                label{
+                    font-family: $font-vaziri;
+                    font-size: 15px;
+
+
+                }
+                .checkbox-inp{
+                    width: 15px;
+                    height: 15px;
+
+                }
+            }
+
+            .text-inputs  input {
+                margin: 6px;
+                width: 250px;
+                padding:12px 10px;
+                background-color: transparent;
+                border: 1px solid gray;
+                font-size: 17px;
+                font-family: $font-vaziri;
+                transition: border .8s;
+                &::placeholder{
+                    font-size: 17px;
+                    font-family: $font-vaziri;
+                    
+                }
+                
+                &:focus{
+                    border: 1px solid $color-primary;
+                    outline: none;
+                }
+    
+    
+          
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+        .signLoginButton{
+
+            width: 100%;
+            position: relative;
+            top: 20px;
+            display: flex;
+            justify-content: flex-start;
+
+            &-main{
+                width: 230px;
+                height: 50px;
+                background-color: $color-primaryDark;
+                font-family: $font-vaziri;
+                color: $color-white;
+                margin-left: 15px;
+                font-size: 15px;
+                padding: 15px;
+                border: 1px solid transparent;
+                cursor: pointer;
+                transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+                &:hover{
+                    background-color: $color-white;
+                    color : $color-primaryDark;
+                    border: 1px solid $color-primaryDark;
+                }
+            }
+        }
+
+
+    }
+    
+    
+    &-banner {
+        width: 20%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        
+
+        &-wrapper{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            bottom: 80px;
+            .form-banner-welcom{
+                font-family: $font-vaziri;
+                font-size: 28px;
+                color: $color-white;
+                display: block;
+                position: relative;
+                bottom: 30px;
+                
+            }
+    
+            .form-banner-sub{
+                font-size: 18px;
+                font-family: $font-title;
+                color: $color-white;
+                display: block;
+                position: relative;
+                bottom: 30px;
+            }
+    
+        }
+
+        .label-prof{
+            width: 250px;
+            height: 50px;
+            margin-top: 16px;
+            // padding: 10px;
+            background-color: $color-white;
+            color: $color-sorm;
+            font-family: $font-vaziri;
+            text-align: center;
+            font-size: 15px;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
+
+        }
+
+
+    }
+
+}
+
+.main{
+    box-sizing: border-box;
+    min-height: 200vh;
+    // padding: 50px 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+
+    &-topDoc {
+        box-sizing: border-box;
+        width: 100%;
+        // height: 33vw;
+        padding: 50px;
+
+        background-color: $color-white;
+        &-Special{
+            min-height: 500px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+            background-color: $color-white;
+
+
+            &-title {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+                padding: 5px;
+                border-bottom: 2px solid $color-primaryDark;
+                font-family: $font-title;
+
+                .seeAll{
+                    a {
+                        color: $color-primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
+
+            &-card {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                overflow-x: auto;
+                padding: 15px 0px;
+                
+                .card{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid $color-primaryDark;
+                    width: 20%;
+                    min-height: 300px;
+                    cursor: pointer;
+                    // padding: 50px;
+                    transition: box-shadow .6s;
+                    border-radius: 10px;
+
+                    &:hover{
+                        // box-shadow: 55px 11px -5px 15px rgb(20, 11, 11);
+                        box-shadow: rgb(165, 163, 163) 0px 0px 17px  3px;
+    
+                    }
+
+                    &-rate{
+                        font-family: $font-vaziri;
+                        font-size: 16px;
+                        color: $color-white;
+                        height: 50px;
+                        width: 30px;
+                        background-color: $color-primary;
+                        // padding: 20px 5px;
+                        position: absolute;
+                        top: 0px;
+                        left: 15px;
+                        line-height: 3;
+                        text-align: center;
+                    }
+
+                    &-prof {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &-name {
+                        margin-top: 25px;
+                        h3{
+                            font-family: $font-vaziri;
+                            font-size: 18px;
+                            line-height: 1;
+                        }
+
+                    }
+
+                    &-sub {
+                        p{
+                            font-family: $font-vaziri;
+                            font-size: 15px;
+                            color: gray;
+                        }
+                    }
+
+                    &-soccor {
+                        svg {
+                            color: $color-primary;
+                            font-size: 20px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+        &-city{
+            min-height: 500px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+
+
+
+            &-title {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+                padding: 5px;
+                border-bottom: 2px solid $color-primaryDark;
+                font-family: $font-title;
+    
+                .seeAll{
+                    a {
+                        color: $color-primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+    
+    
+            &-card {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                overflow-x: auto;
+                padding: 15px 0px;
+                .card{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid $color-primaryDark;
+                    width: 20%;
+                    min-height: 300px;
+                    cursor: pointer;
+                    // padding: 50px;
+                    transition: box-shadow .6s;
+                    border-radius: 10px;
+                    &:hover{
+                        // box-shadow: 55px 11px -5px 15px rgb(20, 11, 11);
+                        box-shadow: rgb(165, 163, 163) 0px 0px 17px  3px;
+    
+                    }
+    
+                    &-rate{
+                        font-family: $font-vaziri;
+                        font-size: 16px;
+                        color: $color-white;
+                        height: 50px;
+                        width: 30px;
+                        background-color: $color-primary;
+                        // padding: 20px 5px;
+                        position: absolute;
+                        top: 0px;
+                        left: 15px;
+                        line-height: 3;
+                        text-align: center;
+                    }
+    
+                    &-prof {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        overflow: hidden;
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &-name {
+                        margin-top: 25px;
+                        h3{
+                            font-family: $font-vaziri;
+                            font-size: 18px;
+                            line-height: 1;
+                        }
+    
+                    }
+    
+                    &-sub {
+                        p{
+                            font-family: $font-vaziri;
+                            font-size: 15px;
+                            color: gray;
+                        }
+                    }
+    
+                    &-soccor {
+                        svg {
+                            color: $color-primary;
+                            font-size: 20px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    .article{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .main-topDoc-article{
+            box-sizing: border-box;
+            width: 30%;
+            background-color: $color-gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: justify;
+            direction: rtl;
+            border-right: 3px solid $color-primary;
+            h3 {
+                font-family: $font-title;
+                color: $color-primary;
+                font-size: 20px;
+            }
+            p{
+                line-height: 1.5;
+                font-family: $font-vaziri;
+            }
+
+        }
+    }
+
+}
+
+
+.result{
+    box-sizing: border-box;
+    min-height: 200vh;
+    width: 100%;
+    background-color: $color-silver;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    &-main {
+        width: 70%;
+        min-height: 100vh;
+        background-color: $color-white;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+        .resultTitle{
+            @include centering;
+            height: 10%;
+            width: 80%;
+            border-bottom: 2px solid $color-primary;
+
+            h3{
+                font-family: $font-title;
+                font-size: 25px;
+
+            }
+        }
+
+
+
+        .resultTable{
+            direction: rtl;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+
+            .table{
+
+                width: 100%;
+                // margin-top: 50px;
+                border-collapse: collapse;
+                &-header{
+                    width: 100%;
+                    background-color: $color-primary;
+                    // border-bottom: 1px solid $color-primary;
+                    height: 80px;
+                    th{
+                        // padding: 10px;
+                        width: 120px !important;
+                        height: 50px;
+                        // background-color: $color-primary;
+                        color: $color-white;
+                        font-family: $font-main;
+                        font-weight: 500;
+                    }
+
+                }
+
+
+                .table-content {
+                    width: 100%;
+                    height: 150px;
+                    border-bottom: 1px solid $color-primary;
+                    text-align: center;
+
+
+
+                    td{
+                        width: 120px !important;
+                        height: 100%;
+                        font-family: $font-vaziri;
+                        margin: 0px;
+                        cursor: pointer;
+
+                        .table-content-link{
+                            @include centering;
+                            color: $color-black;
+                            height: 150px;
+                            width: 100%;
+                        }
+
+                    }
+                    
+
+
+                    &-icon{
+                        // box-sizing: content-box;
+                        // @include centering;
+                        margin-right: 15px !important;
+                        // padding-right: 15px !important;
+                        // width: 25px;
+                        // padding: 15px;
+                        // background-color: orange;
+                    }
+                }
+                
+
+
+            }
+
+        }
+    }
+
+
+    &-filter{
+        width: 30%;
+        height: 50vh;
+        background-color: $color-white;
+        margin: 10px;
+
+        .filter-header{
+            @include centering;
+            background-color: $color-primary;
+            width: 100%;
+            height: 80px;
+            
+
+            h4{
+                font-family: $font-title;
+                font-size: 20px;
+                color: $color-white;
+            }
+        }
+
+
+        .filter-ul{
+            height: 80%;
+            ul{
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+
+
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-sizing: border-box;
+                    width: 100%;
+                    border-bottom: 1px solid $color-silver;
+                    text-align: right;
+                    height: 100px;
+                    line-height: 3;
+                    padding: 0 60px;
+                    // padding-right: 15px;
+                    // padding-left: 25px;
+                    font-family: $font-vaziri;
+                    span {
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.doctordetail{
+    // box-sizing: border-box;
+    background-color: $color-silver;
+    min-height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // overflow-x: hidden;
+    // padding-top: 300px;
+    padding-bottom: 50px;
+
+    .doctorInformation{
+        @include centering;
+        align-items: flex-start;
+        box-sizing: border-box;
+        background: linear-gradient(rgba(238, 238, 238, 0.74) , rgba(255, 255, 255, 0.822) ) , url('../Adds/imgs/wall4.jpg') center no-repeat;
+        background-size: cover;
+        padding-top: 15px;
+        width: 100%;
+        height: 80vh;
+
+        .doctorInformationBox{
+            box-sizing: border-box;
+            width: 1170px;
+            height: 479px;
+            margin-top: 1%; 
+            display: flex;
+            flex-direction: row-reverse;
+           &-prof{
+                width: 30%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &-pic{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid $color-primary;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &-faver{
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 5%;
+                    justify-content: space-around;
+                    label{
+                        font-size: 16px;
+                        font-family: $font-vaziri;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        border-bottom: 1px solid $color-primary;
+
+                    }
+
+                    svg{
+                        font-size: 26px;
+                        color: $color-primary;
+                        cursor: pointer;
+                    }
+                }
+           }
+
+
+           &-info{
+               box-sizing: border-box;
+               width: 70%;
+               height: 100%;
+                padding: 10px;
+               &-header{
+                   width: 100%;
+                   height: 10%;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    h3{
+                        padding: 10px;
+                        font-family: $font-title;
+                        font-size: 23px;
+                    }
+
+                }
+
+
+                &-main{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 60%;
+                    padding-top: 70px;
+                    direction: rtl;
+                    ul{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+
+                        li{
+                            box-sizing: border-box;
+                            font-family: $font-vaziri;
+                            font-size: 16px;
+                            padding: 7px;
+                            margin-top: 1%;
+                            width: 40%;
+                            display: flex;
+                            align-items: center;
+                            span {
+                                margin-right: 7px;
+                            }
+
+                            svg{
+                                color: $color-primaryDark;
+                            }
+                        }
+                    }
+                }
+
+
+                &-footer{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 10%;
+                    padding: 7px;
+                    direction: rtl;
+                    display: flex;
+                    align-items: center;
+                    // padding-top: 20px;
+
+                    span{
+                        font-size: 16px;
+                        font-family: $font-vaziri;
+                        margin-right: 10px;
+                    }
+
+                    svg{
+                        color : $color-primaryDark
+                    }
+                }
+            }
+        }
+        // box-sizing: border-box;
+        // width: 90%;
+        // height: 60vh;
+        // // border: 2px solid $color-primary;
+        // display: flex;
+        // flex-direction: row-reverse;
+        // margin: 0 auto;
+        // background-color: $color-white;
+
+        &-right{
+            // position: relative;
+            direction: rtl;
+            width: 50%;
+            height: 100%;
+            // background-color: orange;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-left: 1px solid red;
+            .doctorInfo-pic{
+                width: 300px;
+                height: 300px;
+                border : 2px solid $color-primary;
+                border-radius: 20px;
+                overflow: hidden;
+                // position: absolute;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+
+            .doctorInfo-info{
+                position: relative;
+                width: 50%;
+                min-height: 200px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .doctorInfo-text{
+                    display: flex;
+                    justify-content: space-around;
+                    font-family: $font-vaziri;
+                    font-size: 17px;
+
+                    span{
+                        margin-right: 15px;
+                        line-height: 3;
+                    }
+                }
+
+
+
+            }
+        }
+
+
+        &-left{
+            width: 50%;
+            height: 100%;
+
+            .doctorInfo-aboutDoctor{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .doctorInfo-aboutDoctorTitle{
+                    box-sizing: border-box;
+                    font-family: $font-title;
+                    height: 100px;
+                    width: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 25px;
+                    padding-bottom: 5px;
+                    font-size: 25px;
+                }
+
+                .doctorInfo-aboutDoctorText{
+                    @include centering;
+                    direction: rtl;
+                    box-sizing: border-box;
+                    width: 750px;
+                    line-height: 1.5;
+                    text-align: justify;
+                    height: 350px;
+                    position: relative;
+                    margin: 5% auto;
+                    background-color: $color-silver;
+                    font-family: $font-vaziri;
+                    padding: 20px;
+
+                    
+                        .addres{
+                            width: 200px;
+                            border: 1px solid red;
+                        }
+                    }
+
+                }
+
+        }
+    }
+
+    .doctorAboute{
+        box-sizing: border-box;
+        
+        width: 1170px;
+        height: 479px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        direction: rtl;
+        background-color: rgba(255, 255, 255, 0.603);
+        border-radius: 10px;
+        position: relative;
+        top: -100px;
+        z-index: 10;
+        
+        h5{
+            color: $color-primaryDark;
+            font-family: $font-title;
+            font-size: 17px;
+            padding-bottom: 25px;
+        }
+
+        p{
+            font-size: 16px;
+            font-family: $font-vaziri;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+.doctorPanel{
+    box-sizing: border-box;
+    // background-color: aqua;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    direction: rtl;
+    flex-wrap: nowrap;
+    position: relative;
+    
+    
+    &-option {
+        box-sizing: border-box;
+        height: 100%;
+        width: 35%;
+        position: fixed;
+        right: 0px;
+        background: linear-gradient($color-primary , $color-primaryDark , $color-sorm);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // padding-top: 20px;
+        &-header{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: 45%;
+
+            &-prof{
+                width: 100%;
+                height: 100%;
+                // border-radius: 10%;
+                overflow: hidden;
+                background: linear-gradient(rgba(238, 238, 238, 0.5) , rgba(255, 255, 255, 0.4)) , url('../Adds/imgs//sami.jpg') center no-repeat;
+                background-size: cover;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    // object-fit: cover;
+                }
+
+                div{
+                    position: absolute;
+                    right: 40px;
+                    bottom: 10%;
+                    font-size: 20px;
+                    color: $color-primaryDark;
+                    font-family: $font-vaziri;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid $color-primaryDark;
+                }
+
+            }
+
+            &-name {
+                margin-top: 3%;
+                h4{
+                    font-size: 16px;
+                    color: $color-silver;
+                    font-family: $font-vaziri;
+                }
+            }
+        }
+
+
+        &-main{
+            box-sizing: border-box;
+            width: 100%;
+            height: 60%;
+            // background-color: orange;
+            padding-top: 80px;
+            &-menu {
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+                width: 100%;
+                height: 300px;
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li{
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    width: 100%;
+                    border-top: 1px solid white;
+                    cursor: pointer;
+                    transition: background-color .6s;
+
+                    a{
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    p{
+                        margin-right: 15px;
+                        font-family: $font-vaziri;
+                        color: $color-white;
+                        font-size: 15px;
+                    }
+
+                    svg{
+                        color: $color-white;
+                    }
+
+
+
+                    
+                }
+
+
+                .activeLi{
+                    background-color: $color-silver;
+                    p , svg{
+                        color: $color-primaryDark;
+                    }
+                }
+
+
+            }
+
+            &-menu li:last-child{
+                border-bottom: 1px solid $color-white;
+            }
+
+        }
+
+    }
+
+
+    &-changed {
+        box-sizing: border-box;
+        // background-color: rgb(200, 255, 0);  
+        width: 65%;
+
+        min-height: 100vh;
+        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &-bar{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #20232A;
+
+            span{
+                color: $color-white;
+                margin-left: 10px;
+                font-size: 16px;
+                font-family: $font-title;
+                svg{
+                    color: orange;
+                }
+
+
+            }
+
+            a{
+                font-family: $font-josef;
+                color: #61DAFB;
+            }
+
+
+        }
+
+
+        &-main{
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background-color: $color-silver;
+            padding : 100px 50px 30px 130px;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // padding-top: 100px;
+
+            &-title{
+                box-sizing: border-box;
+                padding: 10px;
+                width: 100%;
+                // border-bottom: 3px solid $color-black;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                h3{
+                    font-family: $font-title;
+                    font-size: 20px;
+                    color : $color-primaryDark;
+                }
+
+                span{
+                    height: 2px;
+                    width: 40%;
+                    background-color: $color-black;
+                    
+                }
+            }
+
+
+            &-content{
+                box-sizing: border-box;
+
+                display: flex;
+                flex-direction: column;
+
+                .personalInfo-card {
+                    box-sizing: border-box;
+                    width: 800px;
+                    height: 440px;
+                    margin-top: 5%;
+                    padding: 30px;
+                    background-color: $color-white;
+                    display: flex;
+                    flex-direction: column;
+                    &-title{
+                        padding: 5px;
+                        border-bottom: 1px solid $color-gray;
+                        h4{
+                            font-family: $font-vaziri;
+                            font-size: 18px;
+                            color: $color-primary;
+                        }
+                    }
+
+                    &-main{
+                        margin-top: 3%;
+                        ul{
+                            height: 70%;
+                            width: 100%;
+                            padding: 0px;
+                            margin: 0px;
+                            // background-color: orange;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            border-bottom: 1px solid $color-gray;
+
+                            li{
+                                box-sizing: border-box;
+                                width: 50%;
+                                list-style: disc;
+                                padding: 15px;
+                                font-family: $font-vaziri;
+                                font-size: 16px;
+
+                            }
+                        }
+                    }
+
+                }
+                .aboute-card{
+                    
+                    min-height: auto;
+                }
+                .aboute-card-empty{
+                    height: 200px;
+                }
+                .aboutDoctor{
+                    margin-top: 5%;
+                    text-align: justify;
+                    line-height: 1.5;
+                    
+                    p{
+                        font-family: $font-vaziri;
+                        font-size: 16px;
+
+                    }
+                }
+
+                .aboutDoctor-empty{
+                    height: 200px !important;
+                    display: flex;
+                    @include centering;
+                    p{
+                        font-size: 25px;
+                        font-family: $font-title;
+                        color: $color-primaryDark;
+                    }
+                }
+            }
+
+
+            .doctorPanel-changeInfo-main-content{
+                box-sizing: border-box;
+                background-color: $color-white;
+                width: 850px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3%;
+
+                .changeInfoBox{
+                    box-sizing: border-box;
+                    width: 788px;
+                    height: 216px;
+                    background-color: $color-silver;
+                    padding: 40px;
+                    margin-top: 3%;
+                    &-title{
+                        width: 100%;
+                        
+                        padding: 5px;
+                        border-bottom: 1px solid $color-gray;
+                        h4{
+                            // color: $color-primaryDark;
+                            font-size: 17px;
+                            font-family: $font-title;
+                            font-weight: 400;
+                        }
+                    }
+
+                    &-content{
+                        margin-top: 3%;
+                        display: flex;
+
+                        &-inp{
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                margin-bottom: 10px;
+                                font-family: $font-vaziri;
+                                line-height: 1;
+                                font-size: 14px;
+                            }
+
+                            input{
+                                box-sizing: border-box;
+                                width: 334px;
+                                height: 46px;
+                                padding: 10px;
+                                border: 1px solid transparent;
+                                font-family: $font-vaziri;
+                                font-size: 13px;
+                                transition: border .6s;
+                                border-radius: 5px;
+                                &::placeholder{
+                                    font-size: 12px;
+                                    font-family: $font-vaziri;
+                                }
+
+                                &:focus{
+                                    outline: none;
+                                    border: 1px solid $color-primary;
+                                }
+
+                            }
+
+                            .change-addrsInp{
+                                width: 660px ;
+                            }
+                        }
+                        
+                        &-errors{
+                            display: none;
+                            width: 50%;
+                            // display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            p{
+                                color: $color-colorDanger;
+                                font-family: $font-vaziri;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    .dropdown-content{
+                        width: 30%;
+                        margin-top: 5%;
+                        li{
+                            background-color: $color-gray;
+                        }
+                    }
+                }
+
+
+                .changeInfoBoxPassword{
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 350px;
+                    .changeInfoBox-title{
+                        height: 10%;
+                    }
+                    .changeInfoBox-content{
+                        display: flex;
+                        flex-wrap: wrap;
+                        // justify-content: space-around;
+
+                        margin-bottom: 70px;
+
+                        .changeInfoBox-content-inp{
+                            margin-top: 15px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+
+                .changeInfoBoxPassword div:first-child{
+                    width: 100%;
+                }
+
+
+                .changeInfoButton{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 50px;
+                    margin: 3% 0 3% 0;
+                    button{
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        font-family: $font-vaziri;
+                        font-size: 18px;
+                        cursor: pointer;
+                        // background-color: #1DD3AF;
+                        background-color: $color-primaryDark;
+                        color: $color-white;
+                        border-radius: 5px;
+                    }
+
+                }
+
+
+                .changeProf{
+                    // background-color: red;
+                    display: flex;
+                    align-items: center;
+                    
+                }
+            }
+
+            &-showComments{
+                box-sizing: border-box;
+                width: 90%;
+                min-height: 200px;
+                background-color: $color-white;
+                padding: 30px;
+                margin-top: 5%;
+                .doctorPanel-commentBox{
+                    width: 100%;
+                    height: 20px;
+                    margin-top: 5%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: space-between;
+                    div{
+                        text-align: center;
+                        line-height: 1.5;
+                        P{
+                            font-size: 20px;
+                            font-family: $font-vaziri;
+                            span{
+                                color: $color-primary;
+                            }
+                        }
+                    }
+
+                    .all-comments p:first-child{
+                        color: $color-primary;
+                    }
+
+                }
+                ul{
+                    width: 100%;
+                    min-height: 200px;
+                    padding: 0px;
+                    margin: 0px;
+                    margin-top: 5%;
+                    display: flex;
+                    flex-direction: column;
+
+                    li{
+                        box-sizing: border-box;
+                        padding: 15px;
+                        display: flex;
+                        min-height: 120px;
+                        width: 100%;
+                        background-color: $color-silver;
+                        border-radius: 25px;
+                        margin-top: 15px;
+                        .doctorPanel-comment-report{
+                            @include centering;
+                            flex-direction: column;
+                            width: 15%;
+
+                            svg{
+                                margin-bottom: 15px;
+                                cursor: pointer;
+                            }
+
+                            p{
+                                font-family: $font-vaziri;
+                                font-size: 16px;
+                            }
+                            
+                        }
+
+                        .doctorPanel-comment-content{
+                            width: 80%;
+                            &-title{
+                                padding-bottom: 10px;
+                                span{
+                                    color: $color-primary;
+                                    font-family: $font-josef;
+                                }
+
+                                p{
+                                    font-family: $font-vaziri;
+                                    text-align: justify;
+                                    line-height: 1.5;
+                                    font-size: 16px;
+                                }
+                            }
+
+
+                        }
+
+                        .doctorPanel-comment-history{
+                            @include centering;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 20%;
+                            div{
+                                margin-bottom: 15px;
+                                font-family: $font-vaziri;
+                                font-size: 15px;
+                            }
+
+                            .doctorPanel-comment-likeBox{
+                                display: flex;
+                            }
+                            &-likes{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .aboutMe{
+                box-sizing: border-box;
+                background-color: $color-white;
+                width: 70% ;
+                min-height: 200px;
+                max-height: 800px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 5%;
+                &-title{
+                    width: 80%;
+                    text-align: center;
+                    padding: 5px;
+                    border-bottom: 1px solid $color-primaryDark;
+
+                    h4{
+                        font-size: 17px;
+                        font-family: $font-vaziri;
+                    }
+                }
+
+                &-textaria{
+                    // display: none;
+                    // display: flex;
+                    justify-content: center;
+                    width: 80%;
+                    margin-top: 4%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    textarea{
+                        box-sizing: border-box;
+                        padding: 10px;
+                        font-size: 15px;
+                        font-family: $font-vaziri;
+                        width: 100%;
+                        border: 1px solid silver;
+                        &:focus{
+                            outline: none;
+                            border: 1px solid $color-primaryDark;
+                        }
+                        
+                    }
+
+                    div{
+                        box-sizing: border-box;
+                        padding: 10px;
+
+                        font-size: 15px;
+                        font-family: $font-vaziri;
+                        width: 100%;
+                        border: 1px solid silver;
+                    }
+                }
+                &-plus{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    margin-top: 3%;
+                    &-btn{
+                        font-size: 23px;
+                        font-family: $font-vaziri;
+                        color: $color-primaryDark;
+                        cursor: pointer;
+                    }
+
+                    &-text{
+                        font-size: $font-vaziri;
+                        color: $color-primaryDark;
+                        font-size: 16px;
+                    }
+                }
+
+                &-confirm{
+                    width: 130px;
+                    padding: 10px;
+                    margin-top: 3%;
+                    button{
+                        
+                        width: 100%;
+                        padding: 5px;
+                        font-family: $font-vaziri;
+                        font-size: 13px;
+                        background-color: $color-primary;
+                        color: $color-white;
+                        border: 1px solid transparent;
+                        cursor: pointer;
+                    }
+                }
+
+
+                &-prof{
+                    width: 80%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+
+                &-profDescription{
+                    margin-left: 15%;
+                    ul{
+                        padding: 0;
+                        margin: 0;
+                        direction: rtl;
+                        li{
+                            list-style: disc;
+                            margin-top: 5px;
+                            font-family: $font-vaziri;
+                            color: $color-primaryDark;
+
+                        }
+                    }
+                }
+            }
+
+            .aboutMe-btn{
+                @include centering;
+                width: 70%;
+                margin-top: 5%;
+
+                box-sizing: border-box;
+                
+                height: 50px;
+                margin: 3% 0 3% 0;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    font-family: $font-vaziri;
+                    font-size: 18px;
+                    cursor: pointer;
+                    // background-color: #1DD3AF;
+                    background-color: $color-primaryDark;
+                    color: $color-white;
+                    border-radius: 5px;
+                }
+
+            }
+            
+        }
+    }
+}
+
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50vh;
+    background : linear-gradient(rgb(93, 183, 219), rgb(19, 160, 216) );
+    display: flex;
+    direction: rtl;
+    
+    padding: 20px;
+    &-ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        padding: 15px;  
+        
+        &-title {
+            color: $color-sorm;
+            width: 80%;
+            text-align: center;
+            h3{
+                
+                font-size: 23px;
+                font-family: $font-title;
+                padding: 10px;
+                border-bottom: 3px solid $color-sorm;
+            }
+        }
+
+
+        &-list{
+            box-sizing: border-box;
+            width: 80%;
+            ul{
+                padding: 0px;
+                margin: 0px;
+
+                li{
+                    border-bottom: 1px solid $color-white;
+                    padding: 10px;
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        color: $color-white;
+                        font-family: $font-vaziri;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+
+        }
+
+
+        &-logo{
+            h2 {
+                color: white;
+                font-family: $font-title;
+            }
+        }
+
+
+        &-sub {
+            p {
+                font-family: $font-vaziri;
+                font-size: 15px;
+                color: white;
+            }
+        }
+
+
+
+    }
+
+}
+
+
+
+.TopYearDoc{
+    @include centering;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90vh; 
+
+    position: relative;
+    &-back{
+        width: 100%;
+        height: 100%;
+        background: url('../Adds/imgs/wall3.jpg') center no-repeat;
+        background-size: cover;
+        filter: blur(9px);
+    }
+    h2{
+        display: block;
+        top: 10%;
+        position: absolute;
+        font-size: 28px;
+        z-index: 200;
+        filter: blur(0px);
+        font-family: $font-title;
+        color: $color-black;
+    }
+}
+
+
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    &-header{
+        width: 100%;
+        height: 70vh;
+        background : linear-gradient(rgba(22, 22, 22, 0.418) ,rgba(119, 119, 119, 0.432)  ) ,  url('../Adds/imgs/wallp.jpg') center no-repeat;
+        background-size: cover;
+
+        &-title{
+            width: 100%;
+            margin: 10% auto;
+            text-align: center;
+            h3{
+                font-family: $font-vaziri;
+                font-size: 76px;
+                color: $color-white;
+            }
+        }
+
+
+    }
+
+
+    &-main{
+        @include centering;
+        width: 100%;
+        min-height: 30vh;
+        background-color: $color-white;
+        &-content{
+            box-sizing: border-box;
+            width: 1170px;
+            height: 610px;
+            padding: 150px 30px;
+            background-color:$color-white;
+            direction: rtl;
+            line-height: 2;
+            font-family: $font-vaziri;
+            font-size: 20px;
+            text-align: justify;
+
+        }
+    }
+
+    &-programmersInfo{
+        box-sizing: border-box;
+        width: 100%;
+        // minheight: 100vh;
+        padding: 30px;
+        background-color: $color-white;
+        padding-bottom: 150px;
+        &-banner{
+            width: 100%;
+            display: flex;
+
+            &-left{
+                background: url('../Adds/imgs/Programmer.png') no-repeat center;
+                background-size: cover; 
+                width: 50%;
+                height: 600px;
+            }
+
+            &-right{
+                @include centering;
+                width: 50%;
+                height: 600px;
+                // background-color: red;
+                text-align: center;
+                h4{
+                    display: block;
+                    font-family: $font-main;
+                    font-size: 75px;
+                    color: $color-primary;
+                    width: 500px;
+                    line-height: 1.5;
+                    
+                }
+            }
+        }
+
+
+        &-content{
+            box-sizing: border-box;
+            padding-top: 100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .front-enddev , .back-enddev{
+
+                box-sizing: border-box;
+                width: 90%;
+                height: 40vh;
+                background: linear-gradient(to left ,transparent , $color-primaryDark , rgba(147, 147, 229, 0.822) , transparent) , url('../Adds//imgs/sami.jpg') no-repeat right;
+                padding: 20px;
+                padding-right: 450px;
+                // background-size: contain; 
+                margin-top: 10%;
+                border-radius: 25px;
+                direction: rtl;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // justify-content: center;
+                align-self: flex-end;
+                position: relative;
+                ul{
+                    
+                    margin-top: 2%;
+                    // margin-left: 30%;
+                    li{
+                        font-size: 20px;
+                        color: $color-white;
+                        font-family: $font-vaziri;
+                        margin-top: 10px;
+                    }
+                }
+                .programmer-bio{
+                    direction: rtl;
+                    // margin-right: 10%;
+                    width: 75%;
+                    margin-top: 3%;
+                    font-size: 18px;
+                    font-family: $font-vaziri;
+                    color: $color-white;
+                    line-height: 1.5;
+                    height: 10vh;
+                    // background-color: red;
+                }
+
+                .programmer-spe{
+                    position: absolute;
+                    left: 5%;
+                    top: 4%;
+                    font-size: 40px;
+                    font-family: $font-josef;
+                    color: purple;
+                }
+            }
+
+
+
+            .back-enddev{
+                direction: ltr;
+                background: linear-gradient(to right ,transparent  , $color-primaryDark , rgba(147, 147, 229, 0.822) , transparent) , url('../Adds//imgs/sami.jpg') no-repeat left;
+                align-self: flex-start;
+                padding-left: 450px;
+                
+                .programmer-bio{
+                    direction: ltr;
+                }
+
+                .programmer-spe{
+                    
+                    left: 80% ;
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+.contactUS{
+    background-color: $color-silver;
+    .contactUS-content{
+
+        margin: 100px 0px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        padding: 50px 40px;
+        &-header{
+            font-size: 23px;
+            font-family: $font-title;
+            padding-bottom: 10px;
+            width: 100%;
+            border-bottom: 1px solid $color-primary;
+        }
+
+        ul{
+            margin-top: 2%;
+            li{
+                padding: 10px;
+                width: 80%;
+                font-family: $font-vaziri;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+.topMonthDoctor{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-silver;
+    padding: 50px;
+    &-title{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $color-primary;
+        font-size: 30px;
+        font-family: $font-title;
+        margin-top: 5%;
+    }
+
+
+    &-main{
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+}
